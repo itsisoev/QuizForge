@@ -1,0 +1,20 @@
+@use "themes/themes";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--gray-500-gray-400);
+  background-color: var(--gray-100-twilight-900);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

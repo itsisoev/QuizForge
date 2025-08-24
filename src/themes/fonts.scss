@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arimo'), url('/assets/fonts/Arimo/static/Arimo-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Arimo'), url('/assets/fonts/Arimo/static/Arimo-Bold.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, h5, h6, span, a, p {
+  font-family: "Arimo", sans-serif;
+}
+
+h1 {
+  font-size: 1.375rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+h4 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+}
