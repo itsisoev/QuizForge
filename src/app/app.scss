@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+  }
+
+  &__router {
+    gap: 1rem;
+    display: flex;
+  }
+}

@@ -1,0 +1,35 @@
+.sidebar {
+  width: 13.75rem;
+  height: 100vh;
+  padding: 0 1.25rem;
+
+  &.collapsed {
+    width: 4.375rem;
+
+    a span {
+      display: none;
+    }
+  }
+
+  &__links {
+    ul {
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        color: var(--gray-500-gray-400);
+        gap: 0.625rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: 0.125rem;
+    background-color: var(--gray-400-gray-800);
+    margin: 1.875rem 0;
+  }
+}

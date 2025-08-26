@@ -1,1 +1,13 @@
-<h1>Hello, world!</h1>
+<div class="app">
+  <div class="app__header">
+    <layout-header (toggleSidebar)="sidebar.toggle()"/>
+  </div>
+
+  <div class="app__router">
+    <layout-sidebar #sidebar/>
+    <div>
+      <h1>Hello, world!</h1>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

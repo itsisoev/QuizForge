@@ -1,0 +1,14 @@
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-icon {
+  background-color: transparent;
+}
+
+.btn-circle-blue {
+  border-radius: 50%;
+  background-color: var(--gray-100-twilight-500);
+}

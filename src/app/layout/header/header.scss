@@ -1,0 +1,23 @@
+.header {
+  padding: 0.9375rem 1.25rem;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__main {
+    .input-search {
+      width: 37.5rem;
+      height: 2.8125rem;
+    }
+  }
+
+  &__right {
+    .create-btn {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+}
