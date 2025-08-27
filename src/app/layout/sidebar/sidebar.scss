@@ -4,7 +4,7 @@
   padding: 0 1.25rem;
 
   &.collapsed {
-    width: 4.375rem;
+    width: 5rem;
 
     a span {
       display: none;
@@ -40,5 +40,15 @@
     height: 0.125rem;
     background-color: var(--gray-400-gray-800);
     margin: 1.875rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .collapsed {
+    width: 5rem;
+
+    a span {
+      display: none;
+    }
   }
 }
