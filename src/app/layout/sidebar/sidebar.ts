@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component, effect, signal} from '@angular/core';
 import {ILink} from '../../shared/models/link.model';
+import {ICONS} from '../../shared/constants/icons.constant';
 
 @Component({
   selector: 'layout-sidebar',
@@ -14,12 +15,12 @@ export class Sidebar {
     {
       href: '#',
       label: 'Главная',
-      icon: 'assets/svg/home.svg',
+      icon: ICONS.HOME,
     },
     {
       href: '#',
       label: 'Ваша библиотека',
-      icon: 'assets/svg/folder.svg',
+      icon: ICONS.FOLDER,
     }
   ])
 
