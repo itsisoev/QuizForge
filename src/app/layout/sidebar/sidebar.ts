@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, effect, signal} from '@angular/core';
 import {ILink} from '../../shared/models/link.model';
 
 @Component({
@@ -9,7 +9,7 @@ import {ILink} from '../../shared/models/link.model';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Sidebar {
-  collapsed = signal(false);
+  collapsed = signal(this.loadCollapsed());
   links = signal<ILink[]>([
     {
       href: '#',
@@ -23,8 +23,19 @@ export class Sidebar {
     }
   ])
 
+  constructor() {
+    effect(() => {
+      localStorage.setItem('sidebar-collapsed', JSON.stringify(this.collapsed()));
+    });
+  }
+
 
   toggle() {
     this.collapsed.update(c => !c);
+  }
+
+  private loadCollapsed(): boolean {
+    const saved = localStorage.getItem('sidebar-collapsed');
+    return saved ? JSON.parse(saved) : false;
   }
 }
