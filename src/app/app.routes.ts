@@ -3,13 +3,18 @@ import {ROUTES} from './shared/constants/routes.constant';
 
 export const routes: Routes = [
   {
-    path: '',
-    children: [
-      {
-        path: ROUTES.HOME,
-        loadComponent: () =>
-          import('./features/home/home').then(m => m.Home)
-      }
-    ]
+    path: ROUTES.HOME,
+    loadComponent: () =>
+      import('./features/home/home').then(m => m.Home),
+    pathMatch: 'full',
+  },
+  {
+    path: ROUTES.LIBRARY,
+    loadChildren: () =>
+      import('./features/library/library.routes').then(m => m.libraryRoutes)
+  },
+  {
+    path: '**',
+    redirectTo: ROUTES.HOME,
   }
 ];

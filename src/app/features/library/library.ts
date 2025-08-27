@@ -1,12 +1,12 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
-  selector: 'features-home',
+  selector: 'features-library',
   imports: [],
-  templateUrl: './home.html',
-  styleUrl: './home.scss',
+  templateUrl: './library.html',
+  styleUrl: './library.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Home {
+export class Library {
 
 }

@@ -23,7 +23,7 @@ export class Sidebar {
       icon: ICONS.HOME,
     },
     {
-      href: '#',
+      href: ROUTES.LIBRARY,
       label: 'Ваша библиотека',
       icon: ICONS.FOLDER,
     }
