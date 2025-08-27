@@ -1,10 +1,15 @@
 import {ChangeDetectionStrategy, Component, effect, signal} from '@angular/core';
 import {ILink} from '../../shared/models/link.model';
 import {ICONS} from '../../shared/constants/icons.constant';
+import {ROUTES} from '../../shared/constants/routes.constant';
+import {RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
   selector: 'layout-sidebar',
-  imports: [],
+  imports: [
+    RouterLink,
+    RouterLinkActive
+  ],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -13,7 +18,7 @@ export class Sidebar {
   collapsed = signal(this.loadCollapsed());
   links = signal<ILink[]>([
     {
-      href: '#',
+      href: ROUTES.HOME,
       label: 'Главная',
       icon: ICONS.HOME,
     },

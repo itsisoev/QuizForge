@@ -3,7 +3,11 @@
     <ul>
       @for (link of links(); track link) {
         <li>
-          <a [href]="link.href">
+          <a
+            [routerLink]="link.href"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
             <img [src]="link.icon" width="30" height="30" alt="">
             <span>{{ link.label }}</span>
           </a>
